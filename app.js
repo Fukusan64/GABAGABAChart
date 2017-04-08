@@ -63,7 +63,7 @@ var server = require('http').createServer((req, res) => {
 			console.error(new Error('404 Not Found'));
 			break;
 	}
-}).listen(8080, () => console.log('Server Runing!'));
+}).listen(3000, () => console.log('Server Runing!'));
 
 var io = require('socket.io').listen(server);
 
