@@ -1,0 +1,154 @@
+html,body{
+	font-family: meiryo,"游ゴシック";
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#loginFormBG{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: table;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(36,36,36,0.9);
+	z-index: 1;
+}
+#nameForm{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+#chatBG{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(32,32,32);
+}
+#chatArea{
+	position: relative;
+	margin: 0 auto;
+	width: 40%;
+	min-width: 310px;
+	height: 100%;
+}
+#inputArea{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	padding: 0;
+	margin: 0 0 5px;
+}
+#displayArea{
+	background-color: rgb(16,16,16);
+	width: 100%;
+	height: 100%;
+}
+.label{
+	position: relative;
+	margin:0 5px;
+	color: white;
+	border-bottom: solid 2px #888;
+}
+.input{
+	font-size: 20px;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	border: none;
+	outline: none;
+	width: 200px;
+}
+.input:placeholder-shown {
+	color: #888;
+}
+.input::-webkit-input-placeholder {
+	color: #888;
+}
+.input:-ms-input-placeholder {
+	color: #888;
+}
+.input::-moz-placeholder {
+	color: #888;
+}
+.submitButton{
+	position: relative;
+	font-family: meiryo,FontAwesome;
+	font-size: 25px;
+	border: 2px solid #888;
+	background-color: rgba(0,0,0,0);
+	color: #888;
+	border-radius: 2px;
+	padding: 2px 10px;
+	margin-top: 25px;
+}
+.messageSubmit{
+	display: inline-block;
+	font-size: 20px;
+	width: 40px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.messageLabel{
+	position: absolute;
+	display: inline-block;
+	bottom: 0;
+	box-sizing: border-box;
+	width: calc(100% - 40px);
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+.messageInput{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#displayArea{
+}
+.message{
+	margin: 4px;
+	padding: 5px;
+	border-bottom: 1px solid #aaa;
+}
+.message p{
+	padding: 0;
+	margin: 0;
+}
+.userName{
+	color: white;
+}
+.body{
+	color: #aaa;
+	word-wrap: break-word;
+}
+.myName{
+	color: lightgreen;
+}
+.serverNotice{
+	color: #4EE74E;
+	text-decoration: underline;
+}
+.active{
+	border-color: #4EE74E;
+	color: white;
+}
+.error{
+	color: white;
+}
+.error::before{
+	font-family: FontAwesome;
+	color: yellow;
+	content:"\f071";
+}

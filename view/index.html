@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="chat">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="./socket.io/socket.io.js"></script>
+	<script src="./js/main.js"></script>
+	<title>Chat</title>
+</head>
+<body>
+	<div id="loginFormBG" ng-controller="nameForm" ng-hide="isSetted">
+		<form id="nameForm" ng-submit="submit()">
+			<label class="label" ng-class="{active: isActive}">
+				Name :
+				<input
+					type="text"
+					value=""
+					class="input"
+					ng-focus="isActive = true;"
+					ng-blur="isActive = false;"
+					ng-model="name"
+				/>
+			</label>
+			<br/>
+			<input type="submit" class="submitButton" value="&#xf090; Join" ng-class="{active: (!!name)}">
+			<p class="error" ng-if="!!error">{{error}}</p>
+		</form>
+	</div>
+	<div id="chatBG" ng-controller="chat">
+		<div id="chatArea">
+			<form id="inputArea" ng-submit="submit()">
+				<label class="label messageLabel" ng-class="{active: isActive}">
+					<input
+						type="text"
+						value=""
+						class="input messageInput"
+						placeholder="{{'Message as ' + name}}"
+						ng-focus="isActive = true;"
+						ng-blur="isActive = false;"
+						ng-model="message"
+					/>
+				</label>
+				<input type="submit" class="submitButton messageSubmit" value="&#xf1d8;" ng-class="{active: (!!message)}">
+			</form>
+			<div id="displayArea">
+				<div class="message" ng-repeat="message in messages">
+					<p
+						class="userName"
+						ng-class="{myName: message.isMyMessage}"
+						ng-if="message.isUser"
+					>
+						{{message.userName}}
+					</p>
+					<p class="body" ng-class="{serverNotice:(!message.isUser)}">{{message.body}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

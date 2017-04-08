@@ -1,0 +1,22 @@
+{
+  "name": "gabagaba_chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fukusan64/GABAGABAChart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fukusan64/GABAGABAChart/issues"
+  },
+  "homepage": "https://github.com/Fukusan64/GABAGABAChart#readme",
+  "dependencies": {
+    "socket.io": "^1.7.3"
+  }
+}
